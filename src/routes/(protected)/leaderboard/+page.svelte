@@ -4,7 +4,7 @@
 
     export let data: { users: RecievedUser[]; allCredits: RecievedCredit[] };
 
-    const SEMESTER_START = new Date("2026-02-01T00:00:00");
+    const SEMESTER_START = new Date("2026-02-07T00:00:00");
 
     let creditType: "event" | "tutoring" = "tutoring";
 
