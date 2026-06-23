@@ -64,8 +64,8 @@
 			}
 		}
 		
-		// Filter for graduation year 2025 or earlier
-		if (showOnlyGraduating2025OrLater && user.graduationYear <= 2025) {
+		// Filter for graduation year 2025 or later
+		if (showOnlyGraduating2025OrLater && user.graduationYear < 2025) {
 			return false;
 		}
 		
