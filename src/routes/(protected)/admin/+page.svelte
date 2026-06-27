@@ -12,7 +12,7 @@
 	// Filter states
 	let showOnlyTutors = false;
 	let showOnlyInsufficientHours = false;
-	let showOnlyGraduating2026OrLater = false;
+	let showOnlyGraduating2027OrLater = false;
 	let searchQuery = "";
 
 	// Filtered users based on current filter settings
@@ -64,8 +64,8 @@
 			}
 		}
 		
-		// Filter for graduation year 2026 or later
-		if (showOnlyGraduating2026OrLater && user.graduationYear < 2026) {
+		// Filter for graduation year 2027 or later
+		if (showOnlyGraduating2027OrLater && user.graduationYear < 2027) {
 			return false;
 		}
 		
@@ -185,8 +185,8 @@
 				<span>Show only users with insufficient hours</span>
 			</label>
 			<label class="flex items-center space-x-2">
-				<input type="checkbox" bind:checked={showOnlyGraduating2026OrLater} class="checkbox" />
-				<span>Show only graduating after 2026</span>
+				<input type="checkbox" bind:checked={showOnlyGraduating2027OrLater} class="checkbox" />
+				<span>Show only graduating from 2027 and beyond</span>
 			</label>
 		</div>
 		<div class="flex justify-between items-center">
