@@ -11,7 +11,9 @@ onRecordCreate(async (e) => {
         let htmlContent = '';
 
         if (creditType === "event") {
-            const eventName = e.record.get("event");
+            const eventID = e.record.get("event");
+            const eventRecord = await $app.findRecordById("events", eventID);
+            const eventName = eventRecord.get("name");
             subject = `CREDITED FOR: ${eventName}`;
             htmlContent = `
         <p>Dear ${userName},</p>
@@ -69,5 +71,3 @@ onRecordCreate(async (e) => {
         e.next();
     }
 }, "credits");
-
-
