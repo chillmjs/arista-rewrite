@@ -39,6 +39,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/adapter-vercel": "^4.0.0",
     "date-fns": "^3.6.0",
     "pocketbase": "^0.24.0"
   }
